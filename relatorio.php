@@ -76,101 +76,105 @@
                                         <div class="col-sm-12 col-md-6">
                                             <div class="dataTables_length" id="mostrarLinhas">
                                                 <label>Mostrar <select name="zero_config_length" aria-controls="zero_config" class="form-control form-control-sm">
-                                                                <option value="10">10</option>
-                                                                <option value="25">25</option>
-                                                                <option value="50">50</option>
-                                                                <option value="100">100</option>
-                                                            </select> linhas</label>
-
-                                                            <div class="custom-control custom-radio">
-                                                                <input type="radio" class="custom-control-input" id="button1" name="button" value = "simnao">
-                                                                <label class="custom-control-label" for="button1">Ativos e não ativos</label>
-                                                            </div>
-                                                            <div class="custom-control custom-radio">
-                                                                <input type="radio" class="custom-control-input" id="button2" name="button" value = "sim">
-                                                                <label class="custom-control-label" for="button2">Ativos</label>
-                                                            </div>
-                                                            <div class="custom-control custom-radio">
-                                                                <input type="radio" class="custom-control-input" id="button3" name="button" value = "nao">
-                                                                <label class="custom-control-label" for="button3">Não ativos</label>
-                                                            </div>
-
-                                                        </div>
-                                                    </div>
-                                                    
-                                                    <div class="col-sm-12 col-md-6">
-                                                        <div id="zero_config_filter" class="dataTables_filter">
-                                                            <label>Search:<input type="text" class="form-control form-control-sm" placeholder="" id = "search" aria-controls="zero_config">
-                                                            <button type = "submit" class="btn btn-lg btn-primary btn-block" id = "botaoPesquisar" form = "teste_pesquisar" >Entrar</button>
-                                                            </label>
-                                                         </div>
-                                                    </div>
-                                                    </div>
-
-                                                <div class="row">
-                                                    <div class="col-sm-12">
-                                                        <table id="zero_config" class="table table-striped table-bordered dataTable no-footer" role="grid" aria-describedby="zero_config_info">
-                                                            
-                                                            <thead>
-                                                                <tr role="row"><th class="sorting_asc" tabindex="0" aria-controls="zero_config" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 219px;">Name</th>
-                                                                <th class="sorting" tabindex="0" aria-controls="zero_config" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 306px;">Position</th>
-                                                                <th class="sorting" tabindex="0" aria-controls="zero_config" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 199px;">Office</th>
-                                                                <th class="sorting" tabindex="0" aria-controls="zero_config" rowspan="1" colspan="1" aria-label="Age: activate to sort column ascending" style="width: 136px;">Age</th>
-                                                                <th class="sorting" tabindex="0" aria-controls="zero_config" rowspan="1" colspan="1" aria-label="Start date: activate to sort column ascending" style="width: 227px;">Start date</th>
-                                                                <th class="sorting" tabindex="0" aria-controls="zero_config" rowspan="1" colspan="1" aria-label="Salary: activate to sort column ascending" style="width: 186px;">Salary</th></tr>
-                                                            </thead>
-
-                                                                <tbody>                                                                
-                                                                <tr role="row" class="odd">
-                                                                    <td class="sorting_1">Tiger Nixon</td>
-                                                                    <td>System Architect</td>
-                                                                    <td>Edinburgh</td>
-                                                                    <td>61</td>
-                                                                    <td>2011/04/25</td>
-                                                                    <td>$320,800</td>
-                                                                </tr>                                                                
-                                                                </tbody>   
-
-                                                        </table>
-                                                    </div>
-                                                </div>
-                                            <div class="row">
-                                                <div class="col-sm-12 col-md-5">
-                                                <div class="dataTables_info" id="zero_config_info" role="status" aria-live="polite">Página 1 de 1 para 1 entre</div>
-                                            </div>
-                                            <div class="col-sm-12 col-md-7">
-                                                <div class="dataTables_paginate paging_simple_numbers" id="zero_config_paginate">
-                                                    <ul class="pagination">
-                                                        <li class="paginate_button page-item previous disabled">
-                                                            <input type="hidden" id="pagAnterior" value = "">
-                                                            <a aria-controls="zero_config" data-dt-idx="0" tabindex="0" class="page-link"><<</a>
-                                                        </li>
-                                                        <li class="paginate_button page-item active">
-                                                            <input type="hidden" id = "pagAtual" value = "1">
-                                                            <a aria-controls="zero_config" data-dt-idx="1" tabindex="0" class="page-link">1</a>
-                                                        </li>
-                                                        <li class="paginate_button page-item next disabled">
-                                                            <input type="hidden" id="pagProxima" value = "">
-                                                            <a aria-controls="zero_config" data-dt-idx="2" tabindex="0" class="page-link">>></a>
-                                                        </li>
-                                                            <input type="hidden" id="loginCadastro" value = "3">
-                                                    </ul>
-                                                </div>
+                                                                    <option value="10">10</option>
+                                                                    <option value="25">25</option>
+                                                                    <option value="50">50</option>
+                                                                    <option value="100">100</option>
+                                                               </select> linhas
+                                                </label>
                                             </div>
                                         </div>
-                                  </div>
+                                        
+                                        <div class="col-sm-12 col-md-6">
+                                            <div id="zero_config_filter" class="dataTables_filter">
+                                                <label>Search:<input type="search" class="form-control form-control-sm" placeholder="" id = "search" aria-controls="zero_config" form = "teste_pesquisar" autofocus>                                                
+                                                </label>
+                                            </div>                                            
+                                        </div>
+                                    </div>
 
+                                    <div class = "row">
+
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" class="custom-control-input" id="button1" name="button" value = "simnao" checked>
+                                        <label class="custom-control-label" for="button1">Ativos e não ativos</label>
+                                    </div>
+                                    <div class="custom-control custom-radio">                                        
+                                        <label class=""></label>
+                                    </div>
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" class="custom-control-input" id="button2" name="button" value = "sim">
+                                        <label class="custom-control-label" for="button2">Ativos</label>
+                                    </div>
+                                    <div class="custom-control custom-radio">                                        
+                                        <label class=""></label>
+                                    </div>
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" class="custom-control-input" id="button3" name="button" value = "nao">
+                                        <label class="custom-control-label" for="button3">Não ativos</label>
+                                    </div>
+                                    
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <table id="zero_config" class="table table-striped table-bordered dataTable no-footer" role="grid" aria-describedby="zero_config_info">
+                                                
+                                                <thead>
+                                                    <tr role="row"><th class="sorting_asc" tabindex="0" aria-controls="zero_config" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 219px;">Name</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="zero_config" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 306px;">Position</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="zero_config" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 199px;">Office</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="zero_config" rowspan="1" colspan="1" aria-label="Age: activate to sort column ascending" style="width: 136px;">Age</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="zero_config" rowspan="1" colspan="1" aria-label="Start date: activate to sort column ascending" style="width: 227px;">Start date</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="zero_config" rowspan="1" colspan="1" aria-label="Salary: activate to sort column ascending" style="width: 186px;">Salary</th></tr>
+                                                </thead>
+
+                                                    <tbody>                                                                
+                                                    <tr role="row" class="odd">
+                                                        <td class="sorting_1">Tiger Nixon</td>
+                                                        <td>System Architect</td>
+                                                        <td>Edinburgh</td>
+                                                        <td>61</td>
+                                                        <td>2011/04/25</td>
+                                                        <td>$320,800</td>
+                                                    </tr>                                                                
+                                                    </tbody>   
+
+                                            </table>
+                                        </div>
+                                    </div>
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-5">
+                                        <div class="dataTables_info" id="zero_config_info" role="status" aria-live="polite">Página 1 de 1 para 1 entre</div>
+                                    </div>
+                                    <div class="col-sm-12 col-md-7">
+                                        <div class="dataTables_paginate paging_simple_numbers" id="zero_config_paginate">
+                                            <ul class="pagination" id = "paginacao">
+                                                <li class="paginate_button page-item previous disabled">
+                                                    <input type="hidden" id="pagAnterior" value = "">
+                                                    <a aria-controls="zero_config" data-dt-idx="0" tabindex="0" class="page-link"><<</a>
+                                                </li>
+                                                <li class="paginate_button page-item active">
+                                                    <input type="hidden" id = "pagAtual" value = "1">
+                                                    <a aria-controls="zero_config" data-dt-idx="1" tabindex="0" class="page-link">1</a>
+                                                </li>
+                                                <li class="paginate_button page-item next disabled">
+                                                    <input type="hidden" id="pagProxima" value = "">
+                                                    <a aria-controls="zero_config" data-dt-idx="2" tabindex="0" class="page-link">>></a>
+                                                </li>
+                                                    <input type="hidden" id="loginCadastro" value = "3">
+                                            </ul>
+                                        </div>
+                                    </div>
                                 </div>
+                            </div>
+                        </div>
 
                             </div>
                         </div>
                     </div>
                 </div>                
-            </div>
-
-            <footer class="footer text-center">
-                Robson Camilo
-            </footer>
+            </div>        
             
         </div>
         

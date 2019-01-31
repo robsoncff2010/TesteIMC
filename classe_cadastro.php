@@ -10,7 +10,7 @@ class cadastro extends model
   var $pagAtual_cadastro;
   var $loginCadastro_cadastro;
   //quatidade de registro por página
-  var $itempagina = 10;
+  var $itempagina = 8;
 
 
 
@@ -165,15 +165,26 @@ class cadastro extends model
     $result2 = mysqli_query($this->conexao,$query2);
     $row2    = mysqli_num_rows($result2);
     
+    $i = 1;
+
+    if($row >= 1)
+    {
+      $arquivos[0] = array
+      (
+        "button" => $this->button_cadastro,
+      );
+    }
+
     while($dados = mysqli_fetch_array($result))
-    {      
-      $arquivos[] = array
+    {     
+      $arquivos[$i] = array
       (
         "idUsuario"   => $dados['id_usuario'],
         "nomeUsuario" => $dados['nome_usuario'],
         "email"       => $dados['email'],
-        "ativo"       => $dados['ativo'],
+        "ativo"       => $dados['ativo'],       
       ); // assim por diante com todos os campos
+      $i = $i + 1;
     }
 
     echo json_encode($arquivos);

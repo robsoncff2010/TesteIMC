@@ -120,33 +120,44 @@ $(document).ready(function(){
             'recebe_dados_cadastro.php',
             {                        
                 search_ajax        : $('#search').val(),
-                button_ajax        : $('#button').val(),
+                button_ajax        : $('input[name=button]:checked', '#teste_pesquisar').val(),
                 pagAtual_ajax      : $('#pagAtual').val(),     
                 loginCadastro_ajax : $('#loginCadastro').val(),               
             },
-            function(data){
-
-                console.log(data[0].idUsuario);               
-                
-                var obj = data;
+            function(data)
+            {
                 var tabela = '';
+                var i = 1;
+                var conta = data.length - 1;
 
-                for(var i in data)
-                {
+                for(i = 1; i <= conta; i++)
+                {                    
                     tabela += '<tr><td>' + data[i].idUsuario + '</td>'+
                               '<td>' + data[i].nomeUsuario + '</td>'+
                               '<td>' + data[i].email + '</td>'+
                               '<td>' + data[i].ativo + '</td>' +
-                              '</tr>';                              
-                }
-                 
-                 alert(obj.length);
-
+                              '<td>' + 'teste' + '</td>' +
+                              '<td>' + 'teste' + '</td>' +
+                              '<td>' + 'teste' + '</td>' +
+                              '<td>' + '<button class="btn btn-info btn-sm" value = "' +
+                               data[i].idUsuario + '">Editar</button> <button class="btn btn-danger btn-sm" value = "' +
+                               data[i].idUsuario + '">Excluir</button>' + '</td>' +
+                              '<td>' + 'teste' + '</td>' +
+                              '</tr>';
+                }                 
+                 // contar numeros de linhas do data  alert(data.length);                 
+                 $('#search').val('');
                  $('#zero_config').html('');
-                 $('#zero_config').html(tabela); 
-                                 
+                 //$('#paginacao').html('');   
+                 $('#zero_config').html(tabela);
             },
             'json'
-        );
+        ).fail(function(){
+
+            alert("Sua pesquisa não encontrou nenhum resultado!")
+            $('#search').val('');
+            $('#zero_config').html('');
+
+        });
     });
 });
