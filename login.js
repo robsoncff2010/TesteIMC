@@ -131,46 +131,20 @@ $(document).ready(function(){
                 var obj = data;
                 var tabela = '';
 
-                for(var i in data){
+                for(var i in data)
+                {
                     tabela += '<tr><td>' + data[i].idUsuario + '</td>'+
                               '<td>' + data[i].nomeUsuario + '</td>'+
                               '<td>' + data[i].email + '</td>'+
                               '<td>' + data[i].ativo + '</td>' +
-                              '</tr>';
-                              
+                              '</tr>';                              
                 }
-
-
-//dkfgkdgflkjdgfkjghdjkfhjdhfjklhd
-//fdlhfkjdhfkjlkhd
-
-              // for (i = 0; i < obj.length; i++)
-              // {
-                 //  alert(obj[i].idUsuario + " ----- " + obj[i].nomeUsuario + " ----- " + obj[i].email + " ----- " + obj[i].ativo);
-                 //buscarvalor = '<tr><td>' + obj[i].idUsuario + '</td></tr>';             
-                 //   buscarvalor += '<tr><td>' + data['justificativa'][i] + '</td></tr>';
-              //  tabela = Array(
-              //   '<tr>' +
-              //     '<td>' + obj[i].idUsuario + '</td>' +
-              //     '<td>' + obj[i].nomeUsuario + '</td>' +
-              //     '<td>' + obj[i].email + '</td>'+
-              //     '<td>' + 'teste' + '</td>'+
-              //     '<td>' + 'teste' + '</td>'+
-              //     '<td>' + 'teste' + '</td>'+
-              //   '</tr>',
-              //       );                
-              //   }
                  
                  alert(obj.length);
 
                  $('#zero_config').html('');
-                 $('#zero_config').html(tabela);
-               // $('.add-info').html(buscarvalor);
-//
-//
-               // $('#zero_config').html('');
-               // $('#zero_config').html(teste);
-                
+                 $('#zero_config').html(tabela); 
+                                 
             },
             'json'
         );
