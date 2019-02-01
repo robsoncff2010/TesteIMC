@@ -186,7 +186,6 @@ class cadastro extends model
       ); // assim por diante com todos os campos
       $i = $i + 1;
     }
-
     echo json_encode($arquivos);
     //echo "<pre>"; para mostrar array separado por tag
     //echo "<pre>";

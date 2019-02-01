@@ -130,7 +130,7 @@ $(document).ready(function(){
                 var i = 1;
                 var conta = data.length -1;
 
-                for(i = 1; i <= conta; i++)
+                for(i; i <= conta; i++)
                 {                    
                     tabela += '<tr><td>' + data[i].idUsuario + '</td>'+
                               '<td>' + data[i].nomeUsuario + '</td>'+
