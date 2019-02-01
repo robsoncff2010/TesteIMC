@@ -128,7 +128,7 @@ $(document).ready(function(){
             {
                 var tabela = '';
                 var i = 1;
-                var conta = data.length - 1;
+                var conta = data.length -1;
 
                 for(i = 1; i <= conta; i++)
                 {                    

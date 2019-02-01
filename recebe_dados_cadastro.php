@@ -17,6 +17,7 @@
     }
     if($loginCadastro == 3)
     {
+        $data->Paginacao();
         $data->Tabela();
     }
 
